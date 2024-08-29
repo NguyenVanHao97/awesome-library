@@ -1,5 +1,6 @@
+/* eslint-disable react-native/no-inline-styles */
 import {
-  Pressable,
+  TouchableOpacity,
   StyleSheet,
   Text,
   type GestureResponderEvent,
@@ -18,14 +19,10 @@ interface Props {
 }
 const AppButton: React.FC<Props> = (props) => {
   return (
-    <Pressable
-      style={({ pressed }) => [
+    <TouchableOpacity
+      style={[
         {
-          backgroundColor: props.disabled
-            ? '#ccc'
-            : pressed
-              ? '#aa0000'
-              : props.color || 'red',
+          backgroundColor: props.disabled ? '#ccc' : 'red',
         },
         styles.container,
         props.buttonStyles,
@@ -38,7 +35,7 @@ const AppButton: React.FC<Props> = (props) => {
       <Text style={[styles.text, props.textStyles]}>
         {props.children || 'Press Me'}
       </Text>
-    </Pressable>
+    </TouchableOpacity>
   );
 };
 
