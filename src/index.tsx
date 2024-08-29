@@ -7,9 +7,6 @@ import {
   type ViewStyle,
 } from 'react-native';
 
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
-}
 interface Props {
   disabled?: boolean;
   color?: string;
