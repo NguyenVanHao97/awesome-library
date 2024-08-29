@@ -1,5 +1,5 @@
 {
-  "name": "awesome-library",
+  "name": "@tommy97/awesome-library",
   "version": "0.1.0",
   "description": "fo test",
   "source": "./src/index.tsx",

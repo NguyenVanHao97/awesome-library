@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'awesome-library';
+import AppButton, { multiply } from 'awesome-library';
 
 export default function App() {
   const [result, setResult] = useState<number | undefined>();
@@ -11,6 +11,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <AppButton onPress={() => setResult((i) => (i ?? 0) + 1)}>
+        Multiply
+      </AppButton>
       <Text>Result: {result}</Text>
     </View>
   );
